@@ -6,4 +6,4 @@ python argparse_test.py 4\
                         2\
                         --minus 1\
                         -v\
-                        --list 3.1415 7.22
+                        --list-haha 3.1415 7.22
