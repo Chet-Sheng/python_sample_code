@@ -2,13 +2,14 @@ import numpy as np
 import argparse
 '''https://docs.python.org/3/library/argparse.html'''
 
-def Operation(x,y,minus,verbose,list):
+def Operation(x,y,minus,verbose,list, inspect):
     if verbose:
         print("{} ^ {} equals {}".format(x, y, x**y))
     else:
         print(x**y)
     print("Above answer minus {} is {}".format(minus, x**y-minus))
     print('The list output is:', list)
+    print('boolen inspect is:', inspect)
 
 if __name__=='__main__':
     '''
@@ -94,11 +95,21 @@ if __name__=='__main__':
         '--list-haha',
         help='This input should be a list rather than a individual value.' ,
         nargs='*',
+        default=[1,2,3],
         # nargs: https://docs.python.org/3/library/argparse.html#nargs
         # '*'. All command-line arguments present are gathered into a list.
         # nargs generally are not used on positional argument.
         type=float
     )
+    
+    # by default, it is False, but in case of having it appearing as flag, it would be True
+    parser.add_argument(
+    	'--inspect-input',
+    	action='store_true',
+    	default=False,
+    	help='inspect input tensors'
+    )
+    
 
 
     '''
@@ -109,4 +120,4 @@ if __name__=='__main__':
     '''
     args=parser.parse_args()
     print(args.__dict__)
-    Operation(args.x, args.y, args.minus, args.verbose, args.list)
+    Operation(args.x, args.y, args.minus, args.verbose, args.list_haha, args.inspect_input)
