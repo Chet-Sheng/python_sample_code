@@ -7,4 +7,5 @@ python argparse_test.py 4\
                         --minus 1\
                         -v\
                         --list-haha 3.1415 7.22 \
-			--inspect-input
+			--inspect-input \
+			--dropout 8

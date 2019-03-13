@@ -110,6 +110,12 @@ if __name__=='__main__':
     	help='inspect input tensors'
     )
     
+    parser.add_argument(
+    	'--dropout',
+    	default=0,
+    	type=int,
+    	choices=range(0, 10)
+    )
 
 
     '''
