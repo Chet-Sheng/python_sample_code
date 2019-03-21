@@ -11,6 +11,8 @@ jupyterlab = "*"
 numpy = "*"
 pandas = "*"
 scipy = "*"
+ipykernel = "*"
+tornado = "*"
 
 [requires]
 python_version = "3.7"

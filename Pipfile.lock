@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "994dbeb01f069200cfa836906e1828fa9a3c6cf85a010f9ff2d6db69e6a409e3"
+            "sha256": "92f96beb673079d8c34859ef22e37f8ad6e2194187a062c5614dc823f180d8b7"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -21,14 +21,6 @@
                 "sha256:b943d1c567743ed0455878fcd60bc28ac9fae38d129d1ccfad58079da00b8951"
             ],
             "version": "==0.7.1"
-        },
-        "appnope": {
-            "hashes": [
-                "sha256:5b26757dc6f79a3b7dc9fab95359328d5747fcb2409d331ea66d0272b90ab2a0",
-                "sha256:8b995ffe925347a2138d7ac0fe77155e4311a0ea6d6da4f5128fe4b3cbe5ed71"
-            ],
-            "markers": "sys_platform == 'darwin'",
-            "version": "==0.1.0"
         },
         "astor": {
             "hashes": [
@@ -160,6 +152,7 @@
                 "sha256:0aeb7ec277ac42cc2b59ae3d08b10909b2ec161dc6908096210527162b53675d",
                 "sha256:0fc0bf97920d454102168ec2008620066878848fcfca06c22b669696212e292f"
             ],
+            "index": "pypi",
             "version": "==5.1.0"
         },
         "ipython": {
@@ -619,6 +612,7 @@
                 "sha256:81203efb26debaaef7158187af45bc440796de9fb1df12a75b65fae11600a255",
                 "sha256:de274c65f45f6656c375cdf1759dbf0bc52902a1e999d12a35eb13020a641a53"
             ],
+            "index": "pypi",
             "version": "==6.0.1"
         },
         "traitlets": {
@@ -644,10 +638,10 @@
         },
         "werkzeug": {
             "hashes": [
-                "sha256:c3fd7a7d41976d9f44db327260e263132466836cef6f91512889ed60ad26557c",
-                "sha256:d5da73735293558eb1651ee2fddc4d0dedcfa06538b8813a2e20011583c9e49b"
+                "sha256:590abe38f8be026d78457fe3b5200895b3543e58ac3fc1dd792c6333ea11af64",
+                "sha256:ee11b0f0640c56fb491b43b38356c4b588b3202b415a1e03eacf1c5561c961cf"
             ],
-            "version": "==0.14.1"
+            "version": "==0.15.0"
         },
         "wheel": {
             "hashes": [
