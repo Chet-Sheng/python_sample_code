@@ -1,0 +1,8 @@
+FROM tensorflow/tensorflow:latest-py3-jupyter
+
+ARG CLOUD_SDK_REPO="cloud-sdk-$(lsb_release -c -s)"
+RUN apt-get -qqy update && apt-get install -qqy curl \
+ && echo "deb http://packages.cloud.google.com/apt $CLOUD_SDK_REPO main" | tee -a /etc/apt/sources.list.d/google-cloud-sdk.list \
+ && curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key add - \
+ && apt-get -qqy update && apt-get install -qqy google-cloud-sdk \
+ && gcloud auth activate-service-account huafeng.sheng@cloud-iq.com --keyfile=./cloudiq-jay-dev-01-ee2f6d0a10f4.json
