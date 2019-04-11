@@ -1,7 +1,7 @@
 FROM tensorflow/tensorflow:latest-py3-jupyter
 
-ARG CLOUD_SDK_REPO="cloud-sdk-$(lsb_release -c -s)"
-RUN apt-get -qqy update && apt-get install -qqy curl \
+RUN apt-get -qqy update && apt-get install -qqy curl
+ && export CLOUD_SDK_REPO="cloud-sdk-$(lsb_release -c -s)" \
  && echo "deb http://packages.cloud.google.com/apt $CLOUD_SDK_REPO main" | tee -a /etc/apt/sources.list.d/google-cloud-sdk.list \
  && curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key add - \
  && apt-get -qqy update && apt-get install -qqy google-cloud-sdk \
