@@ -13,6 +13,7 @@ pandas = "*"
 scipy = "*"
 ipykernel = "*"
 tornado = "*"
+pytest = "*"
 
 [requires]
-python_version = "3.7"
+python_version = "3.6"
