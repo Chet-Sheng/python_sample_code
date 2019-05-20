@@ -17,6 +17,9 @@ pytest = "*"
 matplotlib = "*"
 pytest-flask = "*"
 pytest-mock = "*"
+npm = "*"
+black = "*"
+tqdm = "*"
 
 [requires]
 python_version = "3.6"
