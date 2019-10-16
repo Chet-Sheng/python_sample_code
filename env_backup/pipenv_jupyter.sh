@@ -8,6 +8,9 @@
 
 # Thanks to Luis Meraz: https://stackoverflow.com/users/8017204/luis-meraz
 #https://stackoverflow.com/questions/47295871/is-there-a-way-to-use-pipenv-with-jupyter-notebook
+
+# to run this: bash pipenv_jupyter.sh
+
 add_kernel(){
   pyVersion=$1
   echo "PYTHON VERSION: $pyVersion"

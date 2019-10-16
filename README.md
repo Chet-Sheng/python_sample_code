@@ -1,20 +1,27 @@
 # Python
-Summarised Python Examples
+This repo are collection of generic python samples to quickly refresh memories
+
 ## Setting
-#### Build up Environment
+#### Build up Environment with Docker
 ```bash
-pipenv install
-# Under Python_Code directory
-```
+# build docker image for this repo
+# -t: tag image as "python_sanmple_code"
+# -f: specify a Dockerfile
+docker build -t python_sample_code -f Dockerfile.dev . 
 
-#### Manage Kernels
-```bash
-bash pipenv_jupyter.sh
-```
+# build and set up connection to container for the 1st time 
+bash docker_run.sh
 
-#### Install table of content in jupyter lab
+# access container after initial setup
+docker start -i python_sample_code
+
+# run jupyter in container
+jupyter lab --ip=0.0.0.0 --port=8888
+```
+### Automated Port Mapping 
 ```bash
-jupyter labextension install @jupyterlab/toc
+basically, need a script to recersively check port availability, and then map
+it to available nearest port 
 ```
 
 ## Notebooks
@@ -23,4 +30,4 @@ be not working as counter examples.
 
 File | Content
 ------------ | ------------
-Python_Base.ipynb | Pure Python Knowledge Base. Code in Class part is not optimised
+basic_python.ipynb | Pure Python Knowledge Base. Code in Class part is not optimised

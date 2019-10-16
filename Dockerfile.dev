@@ -4,6 +4,8 @@ RUN apt-get -qqy update && apt-get install -qqy curl npm nodejs
 RUN pip install pandas scipy scikit-learn matplotlib seaborn jupyterlab
 RUN jupyter labextension install @jupyterlab/toc
 RUN chmod -R 777 /.local
+# RUN chmod -Rv 777 /usr/local/
+#RUN chmod -R 777 /.local
 #CMD chown -R user:user ~/.local/share/jupyter
 
 # && export CLOUD_SDK_REPO="cloud-sdk-xenial" \

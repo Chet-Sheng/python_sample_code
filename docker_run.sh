@@ -4,5 +4,5 @@ docker run -it -u $(id -u):$(id -g) \
                -v /$(pwd):/repo \
                -w /repo \
                --name $(basename $("pwd"))\
-               tf \
+               python_sample_code:latest \
                bash
