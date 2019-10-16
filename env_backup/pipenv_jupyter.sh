@@ -3,7 +3,7 @@
 # version 0 15 December 2018
 
 # Prepare a project to work with pipenv and jupyter by creating a pipvenv and adding
-# the kernelspec to jupyter's list of available kernels 
+# the kernelspec to jupyter's list ofavailable kernels
 # additional modules can be added by running pipenv install <module>
 
 # Thanks to Luis Meraz: https://stackoverflow.com/users/8017204/luis-meraz
@@ -20,7 +20,7 @@ add_kernel(){
   read -p "Launch jupyter notebook now? [N/y]" -n 1 -r
   echo
   if [[ $REPLY =~ ^[Yy]$ ]]; then
-    jupyter notebook
+    jupyter notebook_python
   fi
 }
 
