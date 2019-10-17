@@ -7,7 +7,8 @@ This repo are collection of generic python samples to quickly refresh memories
 # build docker image for this repo
 # -t: tag image as "python_sanmple_code"
 # -f: specify a Dockerfile
-docker build -t python_sample_code -f Dockerfile.dev . 
+# docker build -t python_sample_code -f Dockerfile.dev .
+docker build -t python_sample_code .
 
 # build and set up connection to container for the 1st time 
 bash docker_run.sh

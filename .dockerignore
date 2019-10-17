@@ -1,0 +1,5 @@
+# .dockerignore is just like .gitignore.
+# doc: https://docs.docker.com/engine/reference/builder/#dockerignore-file
+# just a few examples:
+*.md
+*.png
