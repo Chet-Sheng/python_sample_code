@@ -7,16 +7,27 @@ This repo are collection of generic python samples to quickly refresh memories
 # build docker image for this repo
 # -t: tag image as "python_sanmple_code"
 # -f: specify a Dockerfile
-# docker build -t python_sample_code -f Dockerfile.dev .
-docker build -t python_sample_code .
+
+docker build -t $(basename $("pwd")) .
+docker build -t $(basename $("pwd")):dev -f Dockerfile.dev .
 
 # build and set up connection to container for the 1st time 
 bash docker_run.sh
+# or
+docker run -it -u $(id -u):$(id -g) \
+               --rm \
+               --network="host" \
+               -v /$(pwd):/repo \
+               -w /repo \
+               --name $(basename $("pwd"))\
+               $(basename $("pwd")):latest \
+               bash
+
 
 # access container after initial setup
 docker start -i python_sample_code
 
-# run jupyter in container
+# run jupyter in container (old way)
 jupyter lab --ip=0.0.0.0 --port=8888
 ```
 ### Automated Port Mapping 
