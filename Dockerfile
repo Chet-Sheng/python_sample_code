@@ -13,6 +13,11 @@ RUN pip install --upgrade pip && pip install -r requirement.txt
 RUN jupyter labextension install @jupyterlab/toc
 RUN chmod -R 777 /.local /.jupyter /.config
 
+CMD ["/bin/bash"]
+# need to install vim and set vims... in case of some package problems...
+# eg. /usr/local/lib/python3.6/dist-packages/astropy/config/configuration.py:532: ConfigurationMissingWarning: Configuration defaults will be used due to PermissionError:13 on None
+#  warn(ConfigurationMissingWarning(msg))
+
 
 #docker build -t $(basename $("pwd")) .
 #

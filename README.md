@@ -2,7 +2,7 @@
 This repo are collection of generic python samples to quickly refresh memories
 
 ## Setting
-#### Build up Environment with Docker
+### Build up Environment with Docker
 ```bash
 # build docker image for this repo
 # -t: tag image as "python_sanmple_code"
@@ -16,7 +16,7 @@ bash docker_run.sh
 # or
 docker run -it -u $(id -u):$(id -g) \
                --rm \
-               --network="host" \
+               --network="host" \  # this works for linux machine only
                -v /$(pwd):/repo \
                -w /repo \
                --name $(basename $("pwd"))\
@@ -35,6 +35,19 @@ jupyter lab --ip=0.0.0.0 --port=8888
 basically, need a script to recersively check port availability, and then map
 it to available nearest port 
 ```
+### Pipenv
+```
+pipenv shell
+# install toc
+jupyter labextension install @jupyterlab/toc
+```
+Jupyter kernel setting
+```
+jupyter kernelspec list
+
+ipython kernel install --user
+```
+
 
 ## Notebooks
 Don't ever clear result of Notebooks! Run all won't work as some cell were supposed to 
